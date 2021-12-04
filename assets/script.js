@@ -1,13 +1,14 @@
+// access the button with id of 'quantity-up'
 const plusBtn = document.querySelector('#quantity-up')
 const minusBtn = document.querySelector('#quantity-down')
-let quantityInfo = document.querySelector('.total-quantity')
+let productQuantity = document.querySelector('.total-quantity')
 
 let quantity = 1
 
-plusBtn.addEventListener('click', function(){
-    // console.log('clicked')
+//  add event listener to the + button
+plusBtn.addEventListener('click', function() {
     quantity++
-    quantityInfo.textContent = `Quantity: ${quantity}`
+    productQuantity.textContent = `Quantity: ${quantity}`
 })
 
 minusBtn.addEventListener('click', function(){
@@ -17,4 +18,5 @@ minusBtn.addEventListener('click', function(){
         quantity--
     }
     quantityInfo.textContent = `Quantity: ${quantity}`
+    // updateTotal()
 })
